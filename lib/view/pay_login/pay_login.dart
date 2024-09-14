@@ -39,6 +39,7 @@ class PayLogin extends StatelessWidget {
             hintText: "Enter Email",
           ),
           ),
+          SizedBox(height: 40,),
           TextField(decoration: InputDecoration(
             filled: true,
             fillColor: Colors.grey,
@@ -46,7 +47,7 @@ class PayLogin extends StatelessWidget {
               borderRadius: BorderRadius.circular(5),
               borderSide: BorderSide(color: Colors.lightBlue),
 
-            ),suffixIcon:  Icon(Icons.account_circle_rounded),
+            ),suffixIcon:  Icon(Icons.visibility),
             hintText: "Enter Email",
           ),
           )
