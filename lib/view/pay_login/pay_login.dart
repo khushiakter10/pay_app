@@ -12,8 +12,8 @@ class PayLogin extends StatelessWidget {
       backgroundColor: const Color(0xffFFFFFF),
       body: SingleChildScrollView(
         child: InkWell(
-          onTap: (){
-            Get.to (()=>Dune());
+          onTap: () {
+            Get.to(() => Dune());
           },
           child: Column(
             children: [
@@ -26,37 +26,79 @@ class PayLogin extends StatelessWidget {
               const Text(
                 "Pay",
                 style: TextStyle(
-                    color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30),
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30),
               ),
-              const SizedBox(height: 10,),
               const SizedBox(
-                  child: Text(
-                "Login to your acount",
-                style: TextStyle(
-                    color: Colors.blueAccent,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold),
+                height: 10,
               ),
-              ),
-              const SizedBox(height: 80,),
-              TextFormField(decoration: InputDecoration(
-                filled: true,fillColor: Colors.grey,
-                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(5),borderSide: const BorderSide(color: Colors.deepPurple)),
-                focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(width: 4),
+              const SizedBox(
+                child: Text(
+                  "Login to your acount",
+                  style: TextStyle(
+                      color: Colors.blueAccent,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
                 ),
-                hintText:"Enter Email",
               ),
+              const SizedBox(
+                height: 80,
               ),
-              const SizedBox(height: 15,),
-              TextFormField(decoration: InputDecoration(
-                filled: true,fillColor: Colors.grey,
-                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(5),borderSide: const BorderSide(color: Colors.deepPurple)),
-                focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(width: 4),
+              TextFormField(
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.grey,
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(color: Colors.deepPurple)),
+                  focusedBorder: const UnderlineInputBorder(
+                    borderSide: BorderSide(width: 4),
+                  ),
+                  hintText: "Enter Email",
                 ),
-                suffixIcon: const Icon(Icons.visibility,size: 20,color: Colors.deepPurple),
-                hintText:"Enter Email",
               ),
+              const SizedBox(
+                height: 15,
               ),
+              TextFormField(
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.grey,
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(color: Colors.deepPurple)),
+                  focusedBorder: const UnderlineInputBorder(
+                    borderSide: BorderSide(width: 4),
+                  ),
+                  suffixIcon: const Icon(Icons.visibility,
+                      size: 20, color: Colors.deepPurple),
+                  hintText: "Enter Email",
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [Text("Forget Password")],
+              ),
+              SizedBox(height: 20,),
+              SizedBox(
+                height: 40,
+                width: 400,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6),)),
+                    onPressed: () {},
+                    child: Text(
+                      "Login",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold),
+                    ),
+                ),
+              )
             ],
           ),
         ),
