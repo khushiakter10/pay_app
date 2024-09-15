@@ -139,8 +139,8 @@ class Logout extends StatelessWidget {
                 ),
               ),
             ),
-          SizedBox(height: 20,),
-            Row(
+          const SizedBox(height: 20,),
+            const Row(
               children: [
                 Text(
                   "Logout",

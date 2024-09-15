@@ -80,7 +80,7 @@ class RegisterPay extends StatelessWidget {
             SizedBox(width: 380,
               height: 40,
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple),
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple,),
                   onPressed: () {},
                   child: const Text(
                     "Register",
