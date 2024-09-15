@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:pay_app/view/dune/dune.dart';
 import 'package:pay_app/view/pay_login/pay_login.dart';
 import 'package:pay_app/view/welcome_view/splash_view.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home:PayLogin(),
+      home:Dune(),
     );
   }
 }
