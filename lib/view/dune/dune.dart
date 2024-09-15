@@ -6,6 +6,7 @@ class Dune extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffFFFFFF),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -14,14 +15,14 @@ class Dune extends StatelessWidget {
               height: 200,
               width: 500,
             ),
-            Text(
+            const Text(
               "Successfully Send",
               style: TextStyle(
                   color: Colors.green,
                   fontWeight: FontWeight.bold,
                   fontSize: 15),
             ),
-            Row(
+            const Row(
               children: [
                 Text("Fahim"),
               ],
@@ -31,7 +32,7 @@ class Dune extends StatelessWidget {
                 Text("fahim@gmail.com"),
               ],
             ),
-            Text(
+            const Text(
               "500 Taka",
               style: TextStyle(
                   color: Colors.green,
@@ -49,7 +50,7 @@ class Dune extends StatelessWidget {
                         borderRadius: BorderRadius.circular(7),
                       )),
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     "Done",
                     style: TextStyle(
                         color: Colors.white,
