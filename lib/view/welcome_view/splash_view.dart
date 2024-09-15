@@ -38,7 +38,7 @@ class SplashView extends StatelessWidget {
                     Get.to (()=>PayLogin());
                   },
                 child: OutlinedButton(
-                 style: OutlinedButton.styleFrom(backgroundColor: Colors.lightBlue),
+                 style: OutlinedButton.styleFrom(backgroundColor: Colors.lightBlue,),
                     onPressed: () {},
                     child: const Text(
                       "Start",

@@ -6,7 +6,7 @@ class RegisterPay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFFFFF),
+      backgroundColor: const Color(0x0fffffff),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -15,15 +15,17 @@ class RegisterPay extends StatelessWidget {
               height: 150,
               width: 500,
             ),
-            Text(
+            const Text(
               "Pay",
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 40,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 50,),
-            Text(
+            const SizedBox(
+              height: 50,
+            ),
+            const Text(
               "Register Here",
               style: TextStyle(
                   color: Colors.deepPurple,
@@ -31,36 +33,66 @@ class RegisterPay extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(
-             width: 380,
+              width: 380,
               child: TextFormField(
                 decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.grey,
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
-                        borderSide: BorderSide(color: Colors.deepPurple)),
+                        borderSide: const BorderSide(color: Colors.deepPurple)),
                     hintText: "Enter Email",
-                    hintStyle: TextStyle(color: Colors.black,fontSize: 13,fontWeight: FontWeight.bold),
-                    focusedBorder:
-                        UnderlineInputBorder(borderSide: BorderSide(width: 4))
-                ),
+                    hintStyle: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold),
+                    focusedBorder: const UnderlineInputBorder(
+                        borderSide: BorderSide(width: 4))),
               ),
             ),
-            SizedBox(height: 13,),
+            const SizedBox(
+              height: 13,
+            ),
             SizedBox(
               width: 380,
-              child: TextFormField(decoration: InputDecoration(
-                filled: true,fillColor: Colors.grey,
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(7),
-                  borderSide: BorderSide(color: Colors.deepPurple)
-                ),
-                suffixIcon: Icon(Icons.visibility,size: 20,),suffixIconColor: Colors.deepPurple,
-                hintText: "Enter Password",hintStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 13),
-                focusedBorder: UnderlineInputBorder(borderSide: BorderSide(width: 4))
+              child: TextFormField(
+                decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.grey,
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(7),
+                        borderSide: const BorderSide(color: Colors.deepPurple)),
+                    suffixIcon: const Icon(
+                      Icons.visibility,
+                      size: 20,
+                    ),
+                    suffixIconColor: Colors.deepPurple,
+                    hintText: "Enter Password",
+                    hintStyle: const TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 13),
+                    focusedBorder: const UnderlineInputBorder(
+                        borderSide: BorderSide(width: 4))),
               ),
-                         ),
-            )
+            ),
+            SizedBox(height: 50,),
+            SizedBox(width: 380,
+              height: 40,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple),
+                  onPressed: () {},
+                  child: const Text(
+                    "Register",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15),
+                  ),
+              ),
+            ),
+            SizedBox(height: 30,),
+            Text("Already have an account Login")
           ],
         ),
       ),

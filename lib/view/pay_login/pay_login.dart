@@ -12,7 +12,7 @@ class PayLogin extends StatelessWidget {
       body: SingleChildScrollView(
         child: InkWell(
           onTap: () {
-            Get.to(() => Dune());
+            Get.to(() => const Dune());
           },
           child: Column(
             children: [
@@ -81,21 +81,21 @@ class PayLogin extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [Text("Forget Password")],
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               SizedBox(
                 height: 40,
                 width: 380,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6),)),
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "Login",
                       style: TextStyle(
                           color: Colors.white,
