@@ -6,7 +6,7 @@ class Dune extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFFFFFF),
+      backgroundColor: const Color(0xffFFFFFF),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -24,22 +24,29 @@ class Dune extends StatelessWidget {
             ),
             const Row(
               children: [
-                Text("Fahim"),
+                Text("Khushi",style: TextStyle(color: Colors.black,fontWeight:FontWeight.bold),),
               ],
             ),
-            Row(
+            const Row(
               children: [
-                Text("fahim@gmail.com"),
+                Text("khushiaktar2023@gmail.com",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
               ],
             ),
-            const Text(
-              "500 Taka",
-              style: TextStyle(
-                  color: Colors.green,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  "500 Taka",
+                  style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
+                ),
+              ],
             ),
-            SizedBox(height: 50,),
+            const SizedBox(
+              height: 50,
+            ),
             SizedBox(
               height: 40,
               width: 300,

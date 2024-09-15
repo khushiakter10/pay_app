@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:pay_app/view/pay_login/pay_login.dart';
 
 class SplashView extends StatelessWidget {
@@ -9,17 +8,17 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFFFFFF),
+      backgroundColor: const Color(0xffFFFFFF),
       body: SafeArea(
         child: Column(
           children: [
             SizedBox(
                 child: Image.asset(
-              "asset/image/figma.png",
+              "asset/image/p.jpg",
               height: 150,
               width: 500,
             )),
-            SizedBox(
+            const SizedBox(
               height: 100,
             ),
             const Text(
@@ -29,22 +28,27 @@ class SplashView extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontSize: 15),
             ),
-            SizedBox(height: 200,),
+            const SizedBox(
+              height: 200,
+            ),
             SizedBox(
               height: 40,
-              width: 350,
+              width: 380,
               child: InkWell(
-                  onTap: (){
-                    Get.to (()=>PayLogin());
-                  },
+                onTap: () {
+                  Get.to(() => const PayLogin());
+                },
                 child: OutlinedButton(
-                 style: OutlinedButton.styleFrom(backgroundColor: Colors.lightBlue,),
+                    style: OutlinedButton.styleFrom(
+                        backgroundColor: Colors.deepPurple,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5))),
                     onPressed: () {},
                     child: const Text(
                       "Start",
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 15,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold),
                     )),
               ),

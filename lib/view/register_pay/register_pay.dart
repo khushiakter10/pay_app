@@ -37,7 +37,7 @@ class RegisterPay extends StatelessWidget {
               child: TextFormField(
                 decoration: InputDecoration(
                     filled: true,
-                    fillColor: Colors.grey,
+                    fillColor: Colors.black26,
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
                         borderSide: const BorderSide(color: Colors.deepPurple)),
@@ -58,7 +58,7 @@ class RegisterPay extends StatelessWidget {
               child: TextFormField(
                 decoration: InputDecoration(
                     filled: true,
-                    fillColor: Colors.grey,
+                    fillColor: Colors.black26,
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(7),
                         borderSide: const BorderSide(color: Colors.deepPurple)),
@@ -76,7 +76,7 @@ class RegisterPay extends StatelessWidget {
                         borderSide: BorderSide(width: 4))),
               ),
             ),
-            SizedBox(height: 50,),
+            const SizedBox(height: 50,),
             SizedBox(width: 380,
               height: 40,
               child: ElevatedButton(
@@ -91,8 +91,8 @@ class RegisterPay extends StatelessWidget {
                   ),
               ),
             ),
-            SizedBox(height: 30,),
-            Text("Already have an account Login")
+            const SizedBox(height: 30,),
+            const Text("Already have an account Login")
           ],
         ),
       ),

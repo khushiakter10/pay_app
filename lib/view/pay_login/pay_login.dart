@@ -36,7 +36,7 @@ class PayLogin extends StatelessWidget {
                 child: Text(
                   "Login to your acount",
                   style: TextStyle(
-                      color: Colors.blueAccent,
+                      color: Colors.deepPurple,
                       fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
@@ -49,7 +49,7 @@ class PayLogin extends StatelessWidget {
                 child: TextFormField(
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Colors.grey,
+                    fillColor: Colors.black26,
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
                         borderSide: const BorderSide(color: Colors.deepPurple)),
@@ -68,7 +68,7 @@ class PayLogin extends StatelessWidget {
                 child: TextFormField(
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Colors.grey,
+                    fillColor: Colors.black26,
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
                         borderSide: const BorderSide(color: Colors.deepPurple)),

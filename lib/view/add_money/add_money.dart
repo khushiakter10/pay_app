@@ -6,38 +6,38 @@ class AddMoney extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFFFFF),
+      backgroundColor: const Color(0x0fffffff),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
               Image.asset("asset/image/apple.png",height: 100,width: 200,),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               SizedBox(
                 height: 100,
                 width: 380,
                 child: TextFormField(
                   decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.grey,
+                      fillColor: Colors.black26,
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5),
-                          borderSide: BorderSide(color: Colors.deepPurple)),
-                      focusedBorder: UnderlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.deepPurple)),
+                      focusedBorder: const UnderlineInputBorder(
                         borderSide: BorderSide(width: 4),
                       ),
                       hintText: "Enter Money",
-                      hintStyle: TextStyle(color: Colors.deepPurple)),
+                      hintStyle: const TextStyle(color: Colors.deepPurple)),
                 ),
               ),
-              SizedBox(height: 200,),
+              const SizedBox(height: 200,),
               SizedBox(
                 height: 50,
-                  width: 400,
+                  width: 380,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple),
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         "Add Money",
                         style: TextStyle(
                             color: Colors.white,
