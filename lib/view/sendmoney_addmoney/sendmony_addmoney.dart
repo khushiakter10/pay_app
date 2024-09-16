@@ -14,7 +14,7 @@ class SendmonyAddmoney extends StatelessWidget {
             height: 150,
             width: Get.width,
             decoration: const BoxDecoration(
-                color: Colors.deepPurple,
+                color: Colors.indigo,
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(100),
                 )),
@@ -40,9 +40,9 @@ class SendmonyAddmoney extends StatelessWidget {
                     width: 100,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.deepPurple),
+                        color: Colors.indigo),
                     child: const Column(
-                      children: [Icon(Icons.send), Text("send moeny")],
+                      children: [Icon(Icons.send), Text("send moeny",style: TextStyle(color: Colors.white),)],
                     ),
                   ),
                   const SizedBox(
@@ -53,7 +53,7 @@ class SendmonyAddmoney extends StatelessWidget {
                     width: 100,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.deepPurple),
+                        color: Colors.indigo),
                     child: const Column(
                       children: [
                         Icon(Icons.plus_one),
@@ -61,8 +61,7 @@ class SendmonyAddmoney extends StatelessWidget {
                           "Add Money",
                           style: TextStyle(
                               color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 10),
+                          ),
                         )
                       ],
                     ),
