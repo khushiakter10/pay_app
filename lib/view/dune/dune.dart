@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:pay_app/view/logout/logout.dart';
+import 'package:pay_app/view/pay_login/pay_login.dart';
+
+import '../send_pay/send_pay.dart';
 
 class Dune extends StatelessWidget {
   const Dune({super.key});
@@ -50,20 +56,13 @@ class Dune extends StatelessWidget {
             SizedBox(
               height: 40,
               width: 300,
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.deepPurple,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(7),
-                      )),
-                  onPressed: () {},
-                  child: const Text(
-                    "Done",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15),
-                  )),
+              child: const Text(
+                "Done",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15),
+              ),
             )
           ],
         ),

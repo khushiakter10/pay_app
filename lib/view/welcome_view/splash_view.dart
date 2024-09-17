@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pay_app/view/pay_login/pay_login.dart';
 
+
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
 
@@ -34,24 +35,21 @@ class SplashView extends StatelessWidget {
             SizedBox(
               height: 40,
               width: 380,
-              child: InkWell(
-                onTap: () {
-                  Get.to(() => const PayLogin());
-                },
-                child: OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                        backgroundColor: Colors.deepPurple,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5))),
-                    onPressed: () {},
-                    child: const Text(
-                      "Start",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    )),
-              ),
+              child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                      backgroundColor: Colors.deepPurple,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5))),
+                  onPressed: () {
+                    Get.to(()=>PayLogin());
+                  },
+                  child: const Text(
+                    "Start",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  )),
             )
           ],
         ),

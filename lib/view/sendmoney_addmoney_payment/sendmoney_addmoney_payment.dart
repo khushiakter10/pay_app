@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pay_app/view/dune/dune.dart';
+import 'package:pay_app/view/register_pay/register_pay.dart';
+import 'package:pay_app/view/send_pay/send_pay.dart';
 
 class SendmoneyAddmoneyPayment extends StatelessWidget {
   const SendmoneyAddmoneyPayment({super.key});
@@ -9,12 +12,13 @@ class SendmoneyAddmoneyPayment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: Color(0xffFFFFFF),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(height: 150,width: Get.width,
               decoration: const BoxDecoration(
-                color: Colors.indigo,
+                color: Colors.deepPurple,
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(100))
               ),
               child: const Column(
@@ -25,42 +29,47 @@ class SendmoneyAddmoneyPayment extends StatelessWidget {
                   Text("Your available balance",style: TextStyle(color: Colors.white,fontSize: 10,))
                 ],
               ),
-            ),SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  height: 80,
-                  width: 100,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.indigo
+            ),const SizedBox(height: 20,),
+            InkWell(
+              onTap: (){
+                Get.to(()=>SendPay());
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 80,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.indigo
+                    ),
+                    child: const Column(
+                      children: [
+                        Icon(Icons.send,color: Colors.white,),
+                        Text("Send Money",style: TextStyle(color: Colors.white),)
+                      ],
+                    ),
                   ),
-                  child: const Column(
-                    children: [
-                      Icon(Icons.send,color: Colors.white,),
-                      Text("Send Money",style: TextStyle(color: Colors.white),)
-                    ],
-                  ),
-                ),
-                SizedBox(width: 20,),
-                Container(
-                  height: 80,
-                  width: 100,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.indigo,
-                  ),
-                  child: Column(
-                    children: [
-                      Icon(Icons.plus_one,color: Colors.white,),
-                      Text("Addmoney",style: TextStyle(color: Colors.white),)
-                    ],
-                  ),
-                )
-              ],
+                  const SizedBox(width: 20,),
+                  Container(
+                    height: 80,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.indigo,
+                    ),
+                    child: const Column(
+                      children: [
+                        Icon(Icons.plus_one,color: Colors.white,),
+                        Text("Addmoney",style: TextStyle(color: Colors.white),)
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             const Row(
               children: [
                 Column(

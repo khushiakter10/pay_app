@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:pay_app/view/next_pay/next_pay.dart';
+
+import '../pay_login/pay_login.dart';
+
+
+
 
 class Logout extends StatelessWidget {
   const Logout({super.key});
@@ -139,16 +147,16 @@ class Logout extends StatelessWidget {
                 ),
               ),
             ),
-          const SizedBox(height: 20,),
-            const Row(
-              children: [
-                Text(
-                  "Logout",
-                  style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.bold),
-                )
-              ],
-            )
+            SizedBox(height: 30,),
+         SizedBox(
+           height: 40,
+           width: 370,
+           child: ElevatedButton(
+               style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple,shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+               onPressed: (){
+                 Get.to(()=>NextPay());
+               }, child: Text("Login",style: TextStyle(color: Colors.white),)),
+         )
           ],
         ),
       ),

@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:pay_app/view/pay_login/pay_login.dart';
+import 'package:pay_app/view/sendmoney_addmoney_payment/sendmoney_addmoney_payment.dart';
+
+import '../dune/dune.dart';
 
 class AddMoney extends StatelessWidget {
   const AddMoney({super.key});
@@ -30,20 +35,16 @@ class AddMoney extends StatelessWidget {
                       hintStyle: const TextStyle(color: Colors.deepPurple)),
                 ),
               ),
-              const SizedBox(height: 200,),
+              SizedBox(height: 20,),
               SizedBox(
-                height: 50,
-                  width: 380,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple),
-                      onPressed: () {},
-                      child: const Text(
-                        "Add Money",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20),
-                      )))
+                height: 40,
+                width: 370,
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+                    onPressed: (){
+                      Get.to(()=>SendmoneyAddmoneyPayment());
+                    }, child: Text("Add Money",style: TextStyle(color: Colors.white),)),
+              )
             ],
           ),
         ),

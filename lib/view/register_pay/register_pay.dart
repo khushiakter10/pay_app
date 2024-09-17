@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:pay_app/view/pay_login/pay_login.dart';
+import 'package:pay_app/view/send_pay/send_pay.dart';
+import 'package:pay_app/view/sendmoney_Addmoney_3/sendmoney_addmoney_3.dart';
+import 'package:pay_app/view/sendmoney_addmoney_payment/sendmoney_addmoney_payment.dart';
 
 class RegisterPay extends StatelessWidget {
   const RegisterPay({super.key});
@@ -76,23 +81,19 @@ class RegisterPay extends StatelessWidget {
                         borderSide: BorderSide(width: 4))),
               ),
             ),
-            const SizedBox(height: 50,),
-            SizedBox(width: 380,
+            SizedBox(height: 25),
+            SizedBox(
               height: 40,
+              width: 370,
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple,),
-                  onPressed: () {},
-                  child: const Text(
-                    "Register",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15),
-                  ),
-              ),
+                 style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple),
+                  onPressed: (){
+                   Get.to(()=>SendmoneyAddmoney3());
+                  }, child: Text("Register",style: TextStyle(color: Colors.white),)),
             ),
-            const SizedBox(height: 30,),
-            const Text("Already have an account Login")
+            SizedBox(height: 30,),
+            Text("Already have an account Login"),
+
           ],
         ),
       ),

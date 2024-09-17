@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:pay_app/view/dune/dune.dart';
+
+import '../register_pay/register_pay.dart';
 
 class NextPay extends StatelessWidget {
   const NextPay({super.key});
@@ -24,7 +28,7 @@ class NextPay extends StatelessWidget {
                           borderSide: const BorderSide(
                             color: Colors.deepPurple,
                           )),
-                      hintText: "khushiaktar2023@gmail.com",
+                      hintText: "Khushiakter",
                       hintStyle: const TextStyle(
                           color: Colors.black,
                           fontSize: 10,
@@ -33,19 +37,15 @@ class NextPay extends StatelessWidget {
                           borderSide: BorderSide(width: 4))),
                 ),
               ),
-              const SizedBox(height: 200,),
-              SizedBox(width: 370,
+              SizedBox(height: 40,),
+              SizedBox(
                 height: 40,
+                width: 370,
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6),)),
-                    onPressed: () {},
-                    child: const Text(
-                      "Next",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    )),
+                  style:ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+                    onPressed: (){
+                    Get.to(()=>Dune());
+                    }, child: Text("Next",style: TextStyle(color: Colors.white),)),
               )
             ],
           ),

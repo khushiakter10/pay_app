@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pay_app/view/dune/dune.dart';
+import 'package:pay_app/view/logout/logout.dart';
+import 'package:pay_app/view/register_pay/register_pay.dart';
+import 'package:pay_app/view/sendmoney_Addmoney_3/sendmoney_addmoney_3.dart';
 
 class SendmonyAddmoney extends StatelessWidget {
   const SendmonyAddmoney({super.key});
@@ -7,6 +11,7 @@ class SendmonyAddmoney extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffFFFFF),
       body: SingleChildScrollView(
           child: Column(
         children: [
@@ -14,7 +19,7 @@ class SendmonyAddmoney extends StatelessWidget {
             height: 150,
             width: Get.width,
             decoration: const BoxDecoration(
-                color: Colors.indigo,
+                color: Colors.deepPurple,
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(100),
                 )),
@@ -33,40 +38,45 @@ class SendmonyAddmoney extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Row(
-                children: [
-                  Container(
-                    height: 80,
-                    width: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.indigo),
-                    child: const Column(
-                      children: [Icon(Icons.send), Text("send moeny",style: TextStyle(color: Colors.white),)],
+              InkWell(
+                onTap: (){
+                  Get.to(()=>RegisterPay());
+                },
+                child: Row(
+                  children: [
+                    Container(
+                      height: 80,
+                      width: 100,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.indigo),
+                      child: const Column(
+                        children: [Icon(Icons.send), Text("send moeny",style: TextStyle(color: Colors.white),)],
+                      ),
                     ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Container(
-                    height: 80,
-                    width: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.indigo),
-                    child: const Column(
-                      children: [
-                        Icon(Icons.plus_one),
-                        Text(
-                          "Add Money",
-                          style: TextStyle(
-                              color: Colors.white,
-                          ),
-                        )
-                      ],
+                    const SizedBox(
+                      width: 20,
                     ),
-                  ),
-                ],
+                    Container(
+                      height: 80,
+                      width: 100,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.indigo),
+                      child: const Column(
+                        children: [
+                          Icon(Icons.plus_one),
+                          Text(
+                            "Add Money",
+                            style: TextStyle(
+                                color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
